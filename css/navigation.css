@@ -1,0 +1,398 @@
+/*
+ * Navigation Styles
+ * Contains styles for the main navigation, mobile menu, and interactive elements
+ */
+
+/* Main Header */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-index-50);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal) var(--transition-function);
+}
+
+#main-header.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#main-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  transition: padding var(--transition-normal) var(--transition-function);
+}
+
+#main-header.scrolled .main-nav {
+  padding: var(--space-3) 0;
+}
+
+/* Logo */
+.logo a {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: color var(--transition-fast) ease;
+}
+
+.logo a:hover {
+  color: var(--color-primary-600);
+}
+
+#main-header.transparent .logo a {
+  color: white;
+}
+
+#main-header.transparent.scrolled .logo a {
+  color: var(--color-neutral-900);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 var(--space-4);
+}
+
+.nav-link {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-800);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast) ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary-600);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary-600);
+  transition: width var(--transition-normal) var(--transition-function);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+#main-header.transparent .nav-link {
+  color: white;
+}
+
+#main-header.transparent .nav-link::after {
+  background-color: white;
+}
+
+#main-header.transparent.scrolled .nav-link {
+  color: var(--color-neutral-800);
+}
+
+#main-header.transparent.scrolled .nav-link::after {
+  background-color: var(--color-primary-600);
+}
+
+#main-header.transparent.scrolled .nav-link:hover,
+#main-header.transparent.scrolled .nav-link.active {
+  color: var(--color-primary-600);
+}
+
+/* Navigation Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: var(--space-3);
+  color: var(--color-neutral-800);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast) ease;
+}
+
+.nav-icon:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-neutral-100);
+}
+
+#main-header.transparent .nav-icon {
+  color: white;
+}
+
+#main-header.transparent .nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#main-header.transparent.scrolled .nav-icon {
+  color: var(--color-neutral-800);
+}
+
+#main-header.transparent.scrolled .nav-icon:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-neutral-100);
+}
+
+/* Cart Icon */
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-primary-600);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-full);
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  margin-left: var(--space-3);
+}
+
+.search-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-800);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast) ease;
+}
+
+.search-toggle:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-neutral-100);
+}
+
+#main-header.transparent .search-toggle {
+  color: white;
+}
+
+#main-header.transparent .search-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#main-header.transparent.scrolled .search-toggle {
+  color: var(--color-neutral-800);
+}
+
+#main-header.transparent.scrolled .search-toggle:hover {
+  color: var(--color-primary-600);
+  background-color: var(--color-neutral-100);
+}
+
+.search-form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  padding: var(--space-3);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal) var(--transition-function);
+}
+
+.search-form.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  background-color: var(--color-neutral-100);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.search-form button {
+  background-color: var(--color-primary-600);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  margin-left: var(--space-2);
+  cursor: pointer;
+  transition: background-color var(--transition-fast) ease;
+}
+
+.search-form button:hover {
+  background-color: var(--color-primary-700);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: var(--space-4);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-neutral-800);
+  transition: all var(--transition-fast) ease;
+}
+
+#main-header.transparent .mobile-menu-toggle span {
+  background-color: white;
+}
+
+#main-header.transparent.scrolled .mobile-menu-toggle span {
+  background-color: var(--color-neutral-800);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 73px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-4) 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-normal) var(--transition-function);
+  z-index: var(--z-index-40);
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav-links li {
+  margin: var(--space-3) 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-800);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast) ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--color-primary-600);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    width: 250px;
+  }
+  
+  .logo a {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-container {
+    display: none;
+  }
+  
+  .mobile-menu {
+    top: 69px;
+  }
+}

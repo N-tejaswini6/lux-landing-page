@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lux Shop - Premium Shopping Experience</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="logo">
+            <a href="/">LUX</a>
+          </div>
+          
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#collections" class="nav-link">Collections</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          
+          <div class="nav-actions">
+            <div class="search-container">
+              <button class="search-toggle">
+                <i class="fas fa-search"></i>
+              </button>
+              <div class="search-form">
+                <input type="text" placeholder="Search for products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+            
+            <a href="#account" class="nav-icon">
+              <i class="fas fa-user"></i>
+            </a>
+            
+            <a href="#cart" class="nav-icon cart-icon">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">3</span>
+            </a>
+            
+            <button class="mobile-menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <div class="mobile-menu">
+      <div class="container">
+        <ul class="mobile-nav-links">
+          <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+          <li><a href="#products" class="mobile-nav-link">Products</a></li>
+          <li><a href="#collections" class="mobile-nav-link">Collections</a></li>
+          <li><a href="#about" class="mobile-nav-link">About</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Discover Luxury</h1>
+            <p>Elevate your style with our premium collections</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Products Section -->
+      <section id="products" class="products-section">
+        <div class="container">
+          <h2 class="section-title">Featured Products</h2>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Luxury Watch">
+                <div class="product-overlay">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Precision Timepiece</h3>
+                <p class="product-price">$299</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Designer Sunglasses">
+                <div class="product-overlay">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Elegant Eyewear</h3>
+                <p class="product-price">$189</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/1270014/pexels-photo-1270014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Leather Wallet">
+                <div class="product-overlay">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Signature Wallet</h3>
+                <p class="product-price">$129</p>
+              </div>
+            </div>
+            
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/4046316/pexels-photo-4046316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Perfume">
+                <div class="product-overlay">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Luxe Fragrance</h3>
+                <p class="product-price">$159</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Collections Section -->
+      <section id="collections" class="collections-section">
+        <div class="container">
+          <h2 class="section-title">Latest Collections</h2>
+          <div class="collections-grid">
+            <div class="collection-card">
+              <img src="https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Summer Collection">
+              <div class="collection-overlay">
+                <h3>Summer Essentials</h3>
+                <a href="#" class="btn-secondary">Explore</a>
+              </div>
+            </div>
+            
+            <div class="collection-card">
+              <img src="https://images.pexels.com/photos/1030946/pexels-photo-1030946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Accessories">
+              <div class="collection-overlay">
+                <h3>Premium Accessories</h3>
+                <a href="#" class="btn-secondary">Explore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <h2 class="section-title">Our Story</h2>
+            <p>At Lux Shop, we believe in providing exceptional quality and unparalleled craftsmanship. Our products are meticulously designed and crafted to elevate your lifestyle.</p>
+            <p>Founded in 2023, we've been committed to sourcing the finest materials and partnering with ethical manufacturers to bring you luxury products that stand the test of time.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-content">
+            <div class="contact-form">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+              </form>
+            </div>
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Luxury Lane, Fashion District, CA 90210</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+1 (800) 123-4567</p>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>contact@luxshop.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>LUX</h2>
+            <p>Premium shopping experience</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Shop</h3>
+              <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Sale</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Help</h3>
+              <ul>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Stay Connected</h3>
+            <p>Subscribe to our newsletter for exclusive offers</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Lux Shop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/js/navigation.js"></script>
+  </body>
+</html>
